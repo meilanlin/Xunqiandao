@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="D:\1.Zonglin Li\XunQianDao\app\libs\Msc.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4f11330834f00ecbf76acef91a5e3be24b99f9fd">
+        <dex dex="D:\1.Zonglin Li\XunQianDao\app\build\intermediates\pre-dexed\debug\Msc_fb5108b154cb20ae47a767589c4a505183fc1eec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="D:\1.Zonglin Li\XunQianDao\app\libs\jxl.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a6f224353653001716448dec51065d050ac782b7">
+        <dex dex="D:\1.Zonglin Li\XunQianDao\app\build\intermediates\pre-dexed\debug\jxl_9d87421be33098dcb08a845eeeb02401bda22579.jar" />
+    </item>
+
+</items>
