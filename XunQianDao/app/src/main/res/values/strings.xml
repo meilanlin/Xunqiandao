@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 命名规则 -->
+    <!-- text开头:普通介绍文本内容 -->
+    <!-- title开头:输入框前的名称 -->
+    <!-- btn开头:按钮名称-->
+    <!-- hint开头:输入框内的hint内容-->
+    <!-- radio开头:选择框的名称-->
+
+    <!-- appid与应用名称 -->
+    <string name="app_id">58dfbed3</string>
+    <string name="app_name">讯签到</string>
+    <!-- 登陆界面 -->
+    <string name="text_proIntro">请由授课教师选择院系与上课时间</string>
+    <string name="text_btnIntro1">查看 清除 签到数据</string>
+    <string name="text_btnIntro2">教师辅助签到 由此进入</string>
+    <string name="title_stuTotal">班级人数：</string>
+    <string name="btn_confirm">确定</string>
+    <string name="btn_proEntrance">教师入口</string>
+    <string name="hint_user_edit">性别(m/f)+学号</string>
+    <string name="hint_stuTotal_edit">输入总人数以计算未签到数量</string>
+    <!-- 声纹验证界面 -->
+    <string name="hint_codeShow">请先点击获取密码，再进行验证或注册</string>
+    <string name="title_userId">ID：</string>
+    <string name="title_classTime">课次：</string>
+    <string name="title_stuClassFrom">班级：</string>
+    <string name="title_codeText">密码：</string>
+    <string name="title_speakTimes">次数：</string>
+    <string name="title_feedback">验证反馈：</string>
+    <string name="radio_number_code">数字密码</string>
+    <string name="radio_text_code">文本密码</string>
+    <string name="btn_getCode">获取密码</string>
+    <string name="btn_verify">验证</string>
+    <string name="btn_stopRecord">停止录音</string>
+    <string name="btn_register">注册</string>
+    <string name="btn_lookModel">查询模型</string>
+    <string name="btn_deleteModel">删除模型</string>
+    <string name="btn_cancel">取消</string>
+    <!-- 签到界面 -->
+    <string name="title_stuId">学号：</string>
+    <string name="title_classTime_check">课次：</string>
+    <string name="title_classStuFrom_check">班级：</string>
+    <string name="title_checkStatus">状态：</string>
+    <string name="radio_Btn1">签到</string>
+    <string name="radio_Btn2">请假</string>
+    <string name="btn_checkIn">签到并返回</string>
+    <string name="text_pageIntro1">请检查信息是否完整</string>
+    <string name="text_pageIntro2">签到后，将自动保存到本地</string>
+    <!-- 教师界面 -->
+    <string name="btn_readData">检视签到记录</string>
+    <string name="btn_manualCheckIn">学生手动签到</string>
+    <string name="btn_cleanData">删除签到文件</string>
+    <string name="text_check_done">已签到人数</string>
+    <string name="text_check_notDone">未签到人数</string>
+    <string name="text_done_number">·0·</string>
+    <string name="text_notDone_number">·0·</string>
+    <string name="text_savePath_intro">签到文件保存路径：0/Courese/list.xml</string>
+    <!-- 启动应用时的背景图 -->
+    <style name="MyTheme.NoTitleBar.CustomBackground" parent="android:Theme.Black">
+        <item name="android:windowBackground">@drawable/load</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+</resources>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?><!--用户登陆界面 教师在此填写院系，上课时间等信息，学生在此填写ID，专业和班级--><!--对应LoginActivity.java-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f9">
+
+    <!--marginStart与marginEnd是系统建议我加上的-->
+    <!--marginStart指的是控件距离开头View部分的间距大小，marginLeft则指的是控件距离左边View部分的间距大小，marginEnd同理-->
+    <!--为了更好适配某些用户从右到左的阅读习惯，因此加上-->
+    <!--因为此应用支持android 4.2以下版本，所以不能删去marginLeft和marginRight-->
+
+    <!--LinearLayout中两个focusable的作用是禁止自动弹出输入法-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="81dp"
+            android:src="@mipmap/login_process_blue" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginStart="28dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="21dp"
+                android:layout_height="25dp"
+                android:src="@mipmap/login_user" />
+            <!--为了可以点击清除editText中的内容，因此重写了EditText-->
+            <!--对应java/view/ClearEditText.java-->
+            <view.ClearEditText
+                android:id="@+id/edt_uname"
+                style="@style/textStyle"
+                android:layout_width="253dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@null"
+                android:drawableRight="@drawable/delete_selector"
+                android:hint="@string/hint_user_edit"
+                android:maxLength="20"
+                android:maxLines="1"></view.ClearEditText>
+        </LinearLayout>
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:background="@color/line_color"></View>
+
+        <Spinner
+            android:id="@+id/spin_major"
+            android:layout_width="200dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/spinner_shape" />
+
+        <Spinner
+            android:id="@+id/spin_class"
+            android:layout_width="200dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/spinner_shape" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            style="@style/textStyle"
+            android:layout_width="200dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/button_orange"
+            android:text="@string/btn_confirm"
+            android:textColor="#E0F2F1"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@color/line_color"></View>
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dp"
+            android:background="@color/line_color"></View>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/text_proIntro"
+            android:textColor="@color/text_color" />
+
+        <Spinner
+            android:id="@+id/spin_colloge"
+            android:layout_width="200dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/spinner_shape" />
+
+        <Spinner
+            android:id="@+id/spin_classtime"
+            android:layout_width="200dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/spinner_shape" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title_stuTotal"
+                android:textSize="@dimen/value_size" />
+
+            <view.ClearEditText
+                android:id="@+id/stu_number"
+                style="@style/textStyle"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="@string/hint_stuTotal_edit"
+                android:inputType="numberDecimal"
+                android:maxLength="3"
+                android:maxLines="1"
+                android:textSize="@dimen/value_size"></view.ClearEditText>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:background="@color/line_color"></View>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/text_btnIntro1"
+            android:textColor="@color/text_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/text_btnIntro2"
+            android:textColor="@color/text_color" />
+
+        <Button
+            android:id="@+id/btn_confirm2"
+            style="@style/textStyle"
+            android:layout_width="200dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_blue"
+            android:text="@string/btn_proEntrance"
+            android:textColor="#E0F2F1"
+            android:textSize="18sp" />
+    </LinearLayout>
+</ScrollView>

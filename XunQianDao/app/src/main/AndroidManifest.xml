@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--xmlns:android 定义android命名空间; package 指定本应用内java主程序包的包名 -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.lizonglin.meilan.xunqiandao"
+    android:versionName="1.0">
+
+    <!--连接网络权限，用于执行云端语音能力 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!--获取手机录音机使用权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <!--读取网络信息状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--获取当前wifi状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!--允许程序改变网络连接状态 -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <!--读取手机信息权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!--读取联系人权限，上传联系人需要用到此权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--application 声明了每一个应用程序的组件及其属性 -->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name="cn.lizonglin.meilan.xunqiandao.XqdApp">
+        <!--activity有四种加载方式 standard、singleTop、singleTask、singleInstance，默认为standard -->
+        <activity
+            android:screenOrientation="portrait"
+            android:name="cn.lizonglin.meilan.xunqiandao.IsvActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop">
+        </activity>
+
+        <activity
+            android:name="cn.lizonglin.meilan.xunqiandao.CheckActivity"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="cn.lizonglin.meilan.xunqiandao.CheckActivityTeacher"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:name="cn.lizonglin.meilan.xunqiandao.LoginActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name="cn.lizonglin.meilan.xunqiandao.LoadActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@style/MyTheme.NoTitleBar.CustomBackground">
+            <intent-filter>
+                <!--表明此activity是作为应用程序的入口 -->
+                <action android:name="android.intent.action.MAIN" />
+                <!--决定应用程序是否显示在程序列表里 -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

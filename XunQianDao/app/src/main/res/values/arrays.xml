@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="college">
+                <item>-理工类院系-</item>
+        <item>数学与统计学院</item>
+        <item>化学与分子工程学院</item>　　
+        <item>物理工程学院</item>
+        <item>信息工程学院</item>
+        <item>电气工程学院</item>
+        <item>材料科学与工程学院</item>
+        <item>机械工程学院</item>
+        <item>土木工程学院</item>
+        <item>水利与环境学院</item>
+        <item>化工与能源学院</item>
+        <item>建筑学院</item>
+        <item>管理工程学院</item>
+        <item>力学与工程科学学院</item>
+        <item>生命科学学院</item>
+                <item>-人文类院系-</item>
+        <item>商学院</item>
+        <item>旅游管理学院</item>
+        <item>公共管理学院</item>
+        <item>法学院</item>
+        <item>文学院</item>
+        <item>新闻与传播学院</item>
+        <item>外语学院</item>
+        <item>马克思主义学院</item>
+        <item>教育学院</item>
+        <item>历史学院</item>
+        <item>信息管理学院</item>
+        <item>体育学院（校本部）</item>
+        <item>音乐学院</item>
+        <item>美术学院</item>
+        <item>书法学院</item>
+                <item>-医学类院系-</item>
+        <item>医学科学院</item>
+        <item>基础医学院</item>
+        <item>临床医学系</item>
+        <item>医学检验系</item>
+        <item>医学实验中心</item>
+        <item>实验动物中心</item>
+        <item>河南省医药科学研究院</item>
+        <item>公共卫生学院</item>
+        <item>护理学院</item>
+        <item>药物研究院</item>
+        <item>药学院</item>
+        <item>第一临床学院</item>
+        <item>第二临床学院</item>
+        <item>第三临床学院</item>
+        <item>口腔医学院</item>
+        <item>第五临床学院</item>
+    </string-array>
+    <string-array name="lgCollege"> <!--一级spinner为理工类院系时-->　
+        <item>-专业-</item>
+    </string-array>
+    <string-array name="rwCollege"> <!--一级spinner为人文类院系时-->　
+        <item>-专业-</item>
+    </string-array>
+    <string-array name="yiCollege"> <!--一级spinner为医学类院系时-->　
+        <item>-专业-</item>
+    </string-array>
+    <!--下面是理工类院系-->
+    <string-array name="st"> <!--数学与统计学院-->　
+        <item>数学与应用数学</item>
+        <item>信息与计算科学</item>　　
+        <item>统计学</item>
+        <item>金融数学</item>
+    </string-array>
+    <string-array name="hg"> <!--化学与分子工程学院-->　　　
+        <item>化学</item>
+        <item>应用化学</item>　　
+    </string-array>
+    <string-array name="wg"> <!--物理工程学院-->　　
+        <item>物理学</item>
+        <item>应用物理学</item>
+        <item>测控技术与仪器</item>
+        <item>电子科学与技术</item>
+        <item>电子信息科学与技术</item>
+    </string-array>
+    <string-array name="xg"> <!--信息工程-->　　
+        <item>电子信息工程</item>
+        <item>通信工程</item>
+        <item>计算机科学与技术</item>
+        <item>软件工程</item>
+    </string-array>
+    <string-array name="dg"> <!--电气工程学院-->
+        <item>自动化</item>
+        <item>电气工程及其自动化</item>
+        <item>生物医学工程</item>
+    </string-array>
+    <string-array name="cg"> <!--材料科学与工程学院-->
+        <item>材料科学与工程</item>
+        <item>材料化学</item>
+        <item>包装工程</item>
+        <item>材料科学与工程</item>
+    </string-array>
+    <string-array name="jg"> <!--机械工程学院-->
+        <item>工业设计</item>
+        <item>机械工程及自动化</item>
+        <item>机械设计制造及其自动化</item>
+    </string-array>
+    <string-array name="tg"> <!--土木工程学院-->
+        <item>土木工程</item>
+        <item>建筑环境与能源应用工程</item>
+        <item>交通工程</item>
+        <item>城市地下空间工程</item>
+    </string-array>
+    <string-array name="sh"> <!--水利与环境学院-->
+        <item>水利水电工程</item>
+        <item>环境工程</item>
+        <item>给水排水工程</item>
+        <item>地理信息系统</item>
+        <item>水文与水资源工程</item>
+        <item>道路桥梁与渡河工程</item>
+    </string-array>
+    <string-array name="hn"> <!--化工与能源学院-->
+        <item>化学工程与工艺</item>
+        <item>制药工程</item>
+        <item>过程装备与控制工程</item>
+        <item>热能与动力工程</item>
+        <item>环境科学</item>
+        <item>安全工程</item>
+    </string-array>
+    <string-array name="jz"> <!--建筑学院-->　
+        <item>建筑学</item>
+        <item>城乡规划学</item>
+        <item>风景园林学</item>
+        <item>艺术设计</item>
+    </string-array>
+    <string-array name="gg"> <!--管理工程学院-->
+        <item>工业工程</item>
+        <item>工程管理</item>
+        <item>电子商务</item>
+        <item>物流管理</item>
+    </string-array>
+    <string-array name="lg"> <!--力学与工程科学学院-->
+        <item>工程力学</item>
+        <item>安全工程</item>
+    </string-array>
+    <string-array name="sk"> <!--生命科学学院-->
+        <item>生物技术</item>
+        <item>生物工程</item>
+        <item>生物信息</item>
+    </string-array>
+    <!--下面是人文类院系-->
+    <string-array name="shang"> <!--商学院-->
+        <item>工商管理</item>
+        <item>经济学</item>
+        <item>国际经济与贸易</item>
+        <item>金融学</item>
+        <item>统计学</item>
+        <item>会计学</item>
+    </string-array>
+    <string-array name="lvG"> <!--旅游管理学院-->
+        <item>旅游管理</item>
+        <item>市场营销</item>
+        <item>音乐表演（空乘方向）</item>
+        <item>酒店管理</item>
+    </string-array>
+    <string-array name="gongG"> <!--公共管理学院-->
+        <item>哲学</item>
+        <item>社会工作</item>
+        <item>行政管理</item>
+        <item>公共事业管理</item>
+    </string-array>
+    <string-array name="fa"> <!--法学院-->
+        <item>法学</item>
+    </string-array>
+    <string-array name="wen"> <!--文学院-->
+        <item>汉语言文学</item>
+        <item>对外汉语</item>
+    </string-array>
+    <string-array name="xc"> <!--新闻与传播学院-->
+        <item>新闻学</item>
+        <item>广告学</item>
+        <item>广播电视新闻学</item>
+    </string-array>
+    <string-array name="wy"> <!--外语学院-->
+        <item>英语</item>
+        <item>对日语外汉语</item>
+        <item>俄语</item>
+        <item>德语</item>
+    </string-array>
+    <string-array name="mks"> <!--马克思主义学院-->
+        <item>思想政治教育学 </item>
+    </string-array>
+    <string-array name="jy"> <!--教育学院-->　
+        <item>教育学</item>
+        <item>应用心理学</item>
+    </string-array>
+    <string-array name="ls"> <!--历史学院-->
+        <item>考古学</item>
+        <item>历史学</item>
+    </string-array>
+    <string-array name="xinG"> <!--信息管理学院-->
+        <item>信息管理与信息系统</item>
+        <item>图书馆学</item>
+        <item>档案学</item>
+    </string-array>
+    <string-array name="ty"> <!--体育学院（校本部）-->　　
+        <item>体育教育</item>
+    </string-array>
+    <string-array name="yy"> <!--音乐学院-->　　
+        <item>音乐表演</item>
+        <item>音乐学</item>
+    </string-array>
+    <string-array name="ms"> <!--美术学院-->　　
+        <item>绘画</item>
+        <item>艺术设计</item>
+        <item>雕塑</item>
+    </string-array>
+    <string-array name="sf"> <!--书法学院-->　
+        <item>书法</item>
+        <item>篆刻</item>
+    </string-array>
+    <!--下面是医学类院系-->
+    <string-array name="yk"> <!--医学科学院-->　
+        <item>-</item>
+    </string-array>
+    <string-array name="jiY"> <!--基础医学院-->
+        <item>基础医学</item>
+    </string-array>
+    <string-array name="lc"> <!--临床医学系-->　　
+        <item>临床医学(五年制)</item>
+        <item>临床医学(七年制)</item>
+        <item>医学影像学</item>
+        <item>麻醉学</item>
+    </string-array>
+    <string-array name="yj"> <!--医学检验系-->　　
+        <item>医学检验</item>
+    </string-array>
+    <string-array name="ySCenter"> <!--医学实验中心-->
+        <item>-</item>
+    </string-array>
+    <string-array name="shiDWCenter"> <!--实验动物中心-->　
+        <item>-</item>
+    </string-array>
+    <string-array name="sResearch"> <!--河南省医药科学研究院-->
+        <item>-</item>
+    </string-array>
+    <string-array name="gw"> <!--公共卫生学院-->
+        <item>预防医学</item>
+    </string-array>
+    <string-array name="hl"> <!--护理学院-->
+        <item>护理学</item>
+    </string-array>
+    <string-array name="yWResearch"> <!--药物研究院-->
+        <item>药学</item>
+        <item>药物制剂</item>
+    </string-array>
+    <string-array name="yao"> <!--药学院-->
+        <item>-</item>
+    </string-array>
+    <string-array name="oneLC"> <!--第一临床学院-->
+        <item>-</item>
+    </string-array>
+    <string-array name="twoLC"> <!--第二临床学院-->
+        <item>-</item>
+    </string-array>
+    <string-array name="threeLC"> <!--第三临床学院-->
+        <item>-</item>
+    </string-array>
+    <string-array name="kq"> <!--口腔医学院-->
+        <item>-</item>
+    </string-array>
+    <string-array name="fiveLC"> <!--第五临床学院-->　
+        <item>-</item>
+    </string-array>
+</resources>

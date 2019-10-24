@@ -1,0 +1,256 @@
+<!--用户签到界面 学生在此进行签到，注意在签到后数据将自动保存到本地0/Course/list.xml中--><!--对应CheckActivity.java-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f9"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="5dp">
+    <!--LinearLayout中两个focusable的作用是禁止自动弹出输入法-->
+
+    <!--marginStart与marginEnd是系统建议我加上的-->
+    <!--marginStart指的是控件距离开头View部分的间距大小，marginLeft则指的是控件距离左边View部分的间距大小，marginEnd同理-->
+    <!--为了更好适配某些用户从右到左的阅读习惯，因此加上-->
+    <!--因为此应用支持android 4.2以下版本，所以不能删去marginLeft和marginRight-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:src="@mipmap/checkin_process_blue" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/title_stuId"
+            android:textColor="#2993D1"
+            android:textSize="@dimen/title_size" />
+
+        <EditText
+            android:id="@+id/studentID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginStart="18dp"
+            android:background="@null"
+            android:hint="如未自动填入,请自己填入"
+            android:maxLength="12"
+            android:textSize="@dimen/value_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="330dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:background="#000000"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/title_classTime_check"
+            android:textColor="#2993D1"
+            android:textSize="@dimen/title_size" />
+
+        <EditText
+            android:id="@+id/class_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginStart="18dp"
+            android:background="@null"
+            android:hint="第a/b节课"
+            android:textSize="@dimen/value_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="330dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:background="#000000"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/title_classStuFrom_check"
+            android:textColor="#2993D1"
+            android:textSize="@dimen/title_size" />
+
+        <EditText
+            android:id="@+id/major_class"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginStart="18dp"
+            android:background="@null"
+            android:hint="如未自动填入,请自己填入"
+            android:inputType="numberDecimal"
+            android:textSize="@dimen/value_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="330dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:background="#000000"></View>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:text="@string/title_checkStatus"
+            android:textColor="#2993D1"
+            android:textSize="@dimen/title_size" />
+
+        <EditText
+            android:id="@+id/check_leave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginStart="18dp"
+            android:background="@null"
+            android:hint="签到/请假"
+            android:inputType="numberDecimal"
+            android:maxLength="8"
+            android:textSize="@dimen/value_size" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="330dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:background="#000000"></View>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/button_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:text="@string/radio_Btn1"
+            android:textColor="@drawable/color_radiobutton" />
+
+        <RadioButton
+            android:id="@+id/button_leave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:text="@string/radio_Btn2"
+            android:textColor="@drawable/color_radiobutton" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_checkIn"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/button_orange"
+        android:padding="0dp"
+        android:text="@string/btn_checkIn"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="330dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:background="#000000"></View>
+
+    <View
+        android:layout_width="330dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="2dp"
+        android:background="#000000"></View>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_pageIntro1"
+        android:textColor="@color/text_color" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_pageIntro2"
+        android:textColor="@color/text_color" />
+
+    <!--下面是此页面放弃的元素-->
+    <!--不要随意改动-->
+    <Button
+        android:id="@+id/button_checkList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        android:background="@drawable/button_green"
+        android:padding="0dp"
+        android:text="@string/btn_readData"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/button_clean"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="0dp"
+        android:background="@drawable/button_green"
+        android:padding="0dp"
+        android:text="@string/btn_cleanData"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
+
+    <ListView
+        android:id="@+id/checkIn_listview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp" />
+
+</LinearLayout>

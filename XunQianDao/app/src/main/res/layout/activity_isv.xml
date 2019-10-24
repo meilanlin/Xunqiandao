@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?><!--用户验证界面 学生在此进行声纹识别与注册，同时可执行查询，删除模型操作--><!--对应IsvActivity.java-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f9"
+    android:orientation="vertical">
+    <!--LinearLayout中两个focusable的作用是禁止自动弹出输入法-->
+
+    <!--marginStart与marginEnd是系统建议我加上的-->
+    <!--marginStart指的是控件距离开头View部分的间距大小，marginLeft则指的是控件距离左边View部分的间距大小，marginEnd同理-->
+    <!--为了更好适配某些用户从右到左的阅读习惯，因此加上-->
+    <!--因为此应用支持android 4.2以下版本，所以不能删去marginLeft和marginRight-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="81dp"
+            android:src="@mipmap/isv_process_blue" />
+
+        <EditText
+            android:id="@+id/edt_result"
+            style="@style/textStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edit_shape"
+            android:enabled="false"
+            android:hint="@string/hint_codeShow"
+            android:maxLines="3"
+            android:minLines="3" />
+        <!--baselineAligned="false"的作用是将两个控件对齐-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_userId"
+                    android:textColor="#2993D1" />
+
+                <TextView
+                    android:id="@+id/txt_authorid"
+                    style="@style/textStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:textColor="@color/text_color"></TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/textStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/title_classTime"
+                    android:textColor="#2993D1" />
+
+                <TextView
+                    android:id="@+id/class_time_auto"
+                    style="@style/textStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:textColor="@color/text_color"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/textStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/title_stuClassFrom"
+                android:textColor="#2993D1" />
+
+            <TextView
+                android:id="@+id/stu_from"
+                style="@style/textStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textColor="@color/text_color"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/textStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/title_codeText"
+                android:textColor="#2993D1" />
+
+            <TextView
+                android:id="@+id/showPwd"
+                style="@style/textStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textColor="@color/text_color" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/textStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/title_speakTimes"
+                android:textColor="#2993D1" />
+
+            <TextView
+                android:id="@+id/showMsg"
+                style="@style/textStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textColor="@color/text_color" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/textStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:text="@string/title_feedback"
+                android:textColor="#2993D1" />
+
+            <TextView
+                android:id="@+id/showRegFbk"
+                style="@style/textStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textColor="@color/text_color" />
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RadioButton
+                android:id="@+id/radioNumber"
+                style="@style/textStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:checked="false"
+                android:text="@string/radio_number_code"
+                android:textColor="@drawable/color_radiobutton"></RadioButton>
+
+            <RadioButton
+                android:id="@+id/radioText"
+                style="@style/textStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:text="@string/radio_text_code"
+                android:textColor="@drawable/color_radiobutton"></RadioButton>
+        </RadioGroup>
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:background="@color/line_color"></View>
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dp"
+            android:background="@color/line_color"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/isv_getpassword"
+                style="@style/textStyle"
+                android:layout_width="200dp"
+                android:layout_height="36dp"
+                android:background="@drawable/button_beige"
+                android:text="@string/btn_getCode"
+                android:textSize="@dimen/button_text_size" />
+
+            <Button
+                android:id="@+id/isv_verify"
+                style="@style/textStyle"
+                android:layout_width="200dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_orange"
+                android:text="@string/btn_verify"
+                android:textColor="#E0F2F1"
+                android:textSize="@dimen/button_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@color/line_color"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/isv_stop_record"
+                style="@style/textStyle"
+                android:layout_width="200dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_beige"
+                android:text="@string/btn_stopRecord"
+                android:textSize="@dimen/button_text_size" />
+
+            <Button
+                android:id="@+id/isv_register"
+                style="@style/textStyle"
+                android:layout_width="200dp"
+                android:layout_height="36dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_blue"
+                android:text="@string/btn_register"
+                android:textColor="#E0F2F1"
+                android:textSize="@dimen/button_text_size" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@color/line_color"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/isv_search"
+                style="@style/textStyle"
+                android:layout_width="100dp"
+                android:layout_height="36dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/button_beige"
+                android:text="@string/btn_lookModel"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/isv_delete"
+                style="@style/textStyle"
+                android:layout_width="100dp"
+                android:layout_height="36dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
+                android:background="@drawable/button_beige"
+                android:text="@string/btn_deleteModel"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/isv_cancel"
+            style="@style/textStyle"
+            android:layout_width="200dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_blue"
+            android:text="@string/btn_cancel"
+            android:textColor="#E0F2F1"
+            android:textSize="@dimen/button_text_size" />
+
+        <TextView
+            android:id="@+id/recordTime"
+            style="@style/textStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>
